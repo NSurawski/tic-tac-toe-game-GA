@@ -7,4 +7,6 @@ const userEvents = require('./game/events')
 // have not written 'onSignUp' function yet!
 $(() => {
   $('#signUp').on('submit', userEvents.onSignUp)
+  $('#signIn').on('submit', userEvents.onSignIn)
+  $('#changePassword').on('submit', userEvents.onChangePass)
 })

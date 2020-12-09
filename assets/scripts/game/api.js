@@ -3,12 +3,30 @@ const config = require('./../config')
 // and what type of request to make
 const signUp = function (data) {
   return $.ajax({
-    url: config.apiUrl + ('/sign-up'),
+    url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: data
 })
 }
 
+const signIn = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/sign-in',
+    method: 'POST',
+    data: data
+  })
+}
+
+const changePass = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/change-password',
+    method: 'PATCH',
+    data: data
+  })
+}
+
 module.exports = {
-  signUp
+  signUp,
+  signIn,
+  changePass
 }
