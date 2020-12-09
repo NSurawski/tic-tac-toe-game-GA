@@ -12,8 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Sign Up</h1>
+      <h1>Tic Tac Toe</h1>
     <div>
+      <h3>Sign Up:</h3>
       <form id="signUp">
         <input name="credentials[email]" type="text" value="email">
         <input name="credentials[password]" type="password">
@@ -21,5 +22,23 @@
         <button id="signUpBtn" type="button" name="submit">Submit</button>
       </form>
     </div>
+    <div>
+      <h3>Sign In:</h3>
+      <form id="signIn">
+        <input name="credentials[email]" type="text" value="email">
+        <input name="credentials[password]" type="password">
+        <button id="signInBtn" type="button" name="submit">Submit</button>
+      </form>
+    </div>
+    <div>
+      <h3>Change Password:</h3>
+      <form id="changePassword">
+        <input name="credentials[password]" type="old-password">
+        <input name="credentials[password]" type="new-password">
+        <button id="changePass" type="button" name="submit">Change Password</button>
+      </form>
+    </div>
+    <h3>Sign Out:</h3>
+    <button id="signOutBtn" type="button" name="submit">Sign Out</button>
     </body>
 </html>
