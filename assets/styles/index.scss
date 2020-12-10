@@ -1,1 +1,26 @@
 @import '~bootstrap/scss/bootstrap';
+
+h1 {
+  text-align: center;
+}
+
+.authenticated-2 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row {
+  height: 400px;
+  width: 400px;
+}
+
+#gameboard {
+  background-color: #9CBDED;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#signOutBtn {
+  margin-bottom: 50px;
+}

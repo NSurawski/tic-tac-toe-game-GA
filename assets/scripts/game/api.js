@@ -26,9 +26,17 @@ const changePass = function (data) {
 }
 
 const signOut = function (data) {
-  return.ajax({
+  return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
+    data: data
+  })
+}
+
+const newGame = function (data) {
+  return $.ajax({
+    url: config.apiUrl + '/new-game',
+    method: 'POST',
     data: data
   })
 }
@@ -37,5 +45,6 @@ module.exports = {
   signUp,
   signIn,
   changePass,
-  signOut
+  signOut,
+  newGame
 }

@@ -45,10 +45,29 @@ const onSignOut = function (event) {
     .catch(ui.onSignOutFailure)
 }
 
+const onNewGame = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.signOut(data)
+    .then(ui.onNewGameSuccess)
+    .catch(ui.onNewGameFailure)
+}
+
+// display new game button when user signs in
+
+// when new game button is clicked, start player as x
+const playerOne = x
+const playerTwo = o
+// and make a POST games API call to create game
+
+// save the API response so you have access to game ID and cells
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePass,
-  onSignOut
+  onSignOut,
+  onNewGame
 }

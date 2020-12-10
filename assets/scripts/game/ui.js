@@ -11,8 +11,10 @@ $('#message').text('Sign Up Failed with error: ' + error.responseJSON.message)
 // handle token here
 const onSignInSuccess = function (userData) {
   $('#message').text('Signed In Successfully!')
-  console.log(data.user)
-  store.user = data.user
+  console.log(userData.user)
+  store.user = userData.user
+  $('.authenticated').show()
+  $('.unauthenticated').hide()
 }
 
 const onSignInFailure = function (error) {
@@ -21,8 +23,8 @@ const onSignInFailure = function (error) {
 
 const onChangeSuccess = function (userData) {
   $('#message').text('Password Change Successful!')
-  console.log(data.user)
-  store.user = data.user
+  console.log(userData.user)
+  store.user = userData.user
 }
 
 const onChangeFailure = function (error) {
@@ -31,10 +33,21 @@ const onChangeFailure = function (error) {
 
 const onSignOutSuccess = function (userData) {
   $('#message').text('Signed Out Successfully!')
+  $('.authenticated').hide()
+  $('.unauthenticated').show()
 }
 
 const onSignOutFailure = function (error) {
   $('m#message').text('Sign Out Failed with error: ' + error.responseJSON.message)
+}
+
+const onNewGameSuccess = function (userData) {
+  $('#message').text('Good Luck!')
+  $('#gameboard').show()
+}
+
+const onNewGameFailure = function (error) {
+  $('#message').text('Game failed to start with error' + error.responseJSON.message)
 }
 
 module.exports = {
@@ -45,5 +58,7 @@ module.exports = {
   onChangeSuccess,
   onChangeFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onNewGameSuccess,
+  onNewGameFailure
 }
