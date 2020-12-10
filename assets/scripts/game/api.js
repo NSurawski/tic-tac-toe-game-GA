@@ -25,8 +25,17 @@ const changePass = function (data) {
   })
 }
 
+const signOut = function (data) {
+  return.ajax({
+    url: config.apiUrl + '/sign-out',
+    method: 'DELETE',
+    data: data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
-  changePass
+  changePass,
+  signOut
 }

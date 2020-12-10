@@ -29,11 +29,21 @@ const onChangeFailure = function (error) {
   $('#message').text('Sign in failed with error: ' + error.responseJSON.message)
 }
 
+const onSignOutSuccess = function (userData) {
+  $('#message').text('Signed Out Successfully!')
+}
+
+const onSignOutFailure = function (error) {
+  $('m#message').text('Sign Out Failed with error: ' + error.responseJSON.message)
+}
+
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
   onSignInSuccess,
   onSignInFailure,
   onChangeSuccess,
-  onChangeFailure
+  onChangeFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
