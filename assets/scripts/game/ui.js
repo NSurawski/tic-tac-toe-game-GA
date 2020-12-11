@@ -5,7 +5,7 @@ const onCreateSuccess = function (userData) {
 }
 
 const onCreateFailure = function (error) {
-$('#message').text('Sign Up Failed with error: ' + error.responseJSON.message)
+  $('#message').text('Sign Up Failed with error: ' + error.responseJSON.message)
 }
 
 // handle token here
@@ -14,6 +14,7 @@ const onSignInSuccess = function (userData) {
   console.log(userData.user)
   store.user = userData.user
   $('.authenticated').show()
+  $('.authenticated-2').show()
   $('.unauthenticated').hide()
 }
 
@@ -34,6 +35,7 @@ const onChangeFailure = function (error) {
 const onSignOutSuccess = function (userData) {
   $('#message').text('Signed Out Successfully!')
   $('.authenticated').hide()
+  $('.authenticated-2').hide()
   $('.unauthenticated').show()
 }
 
@@ -43,11 +45,12 @@ const onSignOutFailure = function (error) {
 
 const onNewGameSuccess = function (userData) {
   $('#message').text('Good Luck!')
-  $('#gameboard').show()
+  $('#createNewGame').show()
 }
 
 const onNewGameFailure = function (error) {
   $('#message').text('Game failed to start with error' + error.responseJSON.message)
+  $('#createNewGame').hide()
 }
 
 module.exports = {

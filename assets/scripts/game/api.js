@@ -1,4 +1,5 @@
 const config = require('./../config')
+const store = require('./../store')
 // telling JQuery to invoke the ajax function and we are sending it an object with important info like where to go
 // and what type of request to make
 const signUp = function (data) {
@@ -6,7 +7,7 @@ const signUp = function (data) {
     url: config.apiUrl + '/sign-up',
     method: 'POST',
     data: data
-})
+  })
 }
 
 const signIn = function (data) {
@@ -21,7 +22,10 @@ const changePass = function (data) {
   return $.ajax({
     url: config.apiUrl + '/change-password',
     method: 'PATCH',
-    data: data
+    data: data,
+    headers: {
+      Autorization: 'Bearer ' + store.user.token
+    }
   })
 }
 
@@ -29,7 +33,10 @@ const signOut = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
-    data: data
+    data: data,
+    headers: {
+      Autorization: 'Bearer ' + store.user.token
+    }
   })
 }
 
@@ -37,7 +44,10 @@ const newGame = function (data) {
   return $.ajax({
     url: config.apiUrl + '/new-game',
     method: 'POST',
-    data: data
+    data: data,
+    headers: {
+      Autorization: 'Bearer ' + store.user.token
+    }
   })
 }
 

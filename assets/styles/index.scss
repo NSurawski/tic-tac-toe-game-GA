@@ -10,14 +10,20 @@ body {
 
 h1 {
   display: table;
-   margin: 0 auto;
-  border: 2px dotted #1E0951;
+  margin: 25px auto;
+  border: 4px dotted #1E0951;
   padding: 25px 0;
   width: 200px;
+
+
 }
 
 button {
   background-color:#D28CF2;
+}
+
+#changePassword {
+  padding-bottom: 50px;
 }
 
 #gameboard {
@@ -58,6 +64,5 @@ justify-content: center;
 .topNav {
   overflow: hidden;
   background-color: #7147DB;
-  padding: 15px;
   margin: 25px auto 25px auto;
 }
