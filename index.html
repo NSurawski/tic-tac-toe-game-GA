@@ -11,13 +11,16 @@
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <h1>Tic Tac Toe</h1>
   <p id="message"></p>
+  <div class="topNav">
   <div class="unauthenticated">
-    <h3>Sign Up:</h3>
+    <h4>Sign Up:</h4>
     <form id="signUp">
       <input name="credentials[email]" type="text" placeholder="email">
       <input name="credentials[password]" type="password" placeholder="password">
@@ -25,7 +28,7 @@
       <button id="signUpBtn" type="submit">Sign Up</button>
     </form>
 
-    <h3>Sign In:</h3>
+    <h4>Sign In:</h4>
     <form id="signIn">
       <input name="credentials[email]" type="text" placeholder="email">
       <input name="credentials[password]" type="password" placeholder="password">
@@ -34,18 +37,21 @@
   </div>
 
   <div class="authenticated">
-    <h3>Change Password:</h3>
+    <h4>Change Password:</h4>
     <form id="changePassword">
       <input name="password[old]" type="password" placeholder="old password">
       <input name="password[new]" type="password" placeholder="new password">
       <button id="changePass" type="button" name="submit">Change Password</button>
     </form>
 
-    <h3>Sign Out:</h3>
+    <h4>Sign Out:</h4>
     <button id="signOutBtn" type="button" name="click">Sign Out</button>
-    <h3>New Game:</h3>
-    <button id="newGame" type="button" name="submit">New Game</button>
-  </div>
+    </div>
+    <div class="newGameParent">
+    </div>
+    </div>
+      <h4>New Game:</h4>
+      <button id="newGame" type="button" name="submit">New Game</button>
   <div class="authenticated-2">
     <div id="gameboard">
         <div class="row">
