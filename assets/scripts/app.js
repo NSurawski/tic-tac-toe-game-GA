@@ -3,6 +3,7 @@
 // dont need .js for events.js file ref
 const userEvents = require('./game/events')
 // wait for page to load then runs given the callback function
+
 // .on = event listener
 $(() => {
   $('#signUp').on('submit', userEvents.onSignUp)
