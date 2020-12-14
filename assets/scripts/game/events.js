@@ -10,11 +10,12 @@ const onSignUp = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
+  // this is working
   api.signUp(data)
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
 }
-
+// this is working
 const onSignIn = function (event) {
   event.preventDefault()
   const form = event.target
@@ -25,6 +26,7 @@ const onSignIn = function (event) {
     .catch(ui.onSignInFailure)
 }
 
+// troubleshoot this
 const onChangePass = function (event) {
   event.preventDefault()
   const form = event.target
@@ -34,7 +36,7 @@ const onChangePass = function (event) {
     .then(ui.onChangeSuccess)
     .catch(ui.onChangeFailure)
 }
-
+// troubleshoot this
 const onSignOut = function (event) {
   event.preventDefault()
   const form = event.target
@@ -45,12 +47,13 @@ const onSignOut = function (event) {
     .catch(ui.onSignOutFailure)
 }
 
+// troubleshoot this
 const onNewGame = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
 
-  api.signOut(data)
+  api.newGame(data)
     .then(ui.onNewGameSuccess)
     .catch(ui.onNewGameFailure)
 }
@@ -59,7 +62,7 @@ const onNewGame = function (event) {
 const hideShowBtn = function () {
   // const hideBtn = document.getElementById('#createNewGame').style.visibility = 'hidden'
   // const showBtn = document.getElementById('#createNewGame').style.visibility = 'visible'
-  if (onSignIn) {
+  if (onSignInSuccess === true) {
     $.ajax('#createNewGame').show()
   } else {
     $.ajax('#createNewGame').hide()
@@ -73,9 +76,13 @@ const hideShowBtn = function () {
 // const gameMove = function (value) {
 //  const form = event.target
 // }
+
+// To Do:
 // and make a POST games API call to create game
 
 // save the API response so you have access to game ID and cells
+
+// utilize event.target for gameboard places?
 
 module.exports = {
   onSignUp,

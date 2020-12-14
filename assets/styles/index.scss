@@ -16,7 +16,6 @@ h1 {
   padding: 25px 0;
   width: 200px;
 
-
 }
 
 button {
@@ -56,6 +55,11 @@ justify-content: center;
 
 }
 
+.heading {
+  display: flex;
+  justify-content: center;
+}
+
 .row {
   height: 400px;
   width: 400px;
@@ -65,6 +69,5 @@ justify-content: center;
 .topNav {
   overflow: hidden;
   background-color: #7147DB;
-  padding-top: 50px;
   margin: 25px auto 25px auto;
 }
