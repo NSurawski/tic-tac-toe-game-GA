@@ -70,8 +70,17 @@ const hideShowBtn = function () {
 }
 
 // when new game button is clicked, start player as x
-//  const playerOne = x
-//  const playerTwo = o
+  const playerOne = x
+  const playerTwo = o
+
+  const order = function () {
+    if ('#createNewGame'// is clicked) {
+      // start as x
+      //else {
+        // start as o
+      }
+    }
+  }
 
 // const gameMove = function (value) {
 //  const form = event.target

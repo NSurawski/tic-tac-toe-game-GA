@@ -11,5 +11,6 @@ $(() => {
   $('#changePassword').on('submit', userEvents.onChangePass)
   $('#signOutBtn').on('click', userEvents.onSignOut)
   $('#createNewGame').on('submit', userEvents.onNewGame)
+  // add Event listener for gameboard clicks:
   // $('#gameboard').addEventListener('click', userEvents)
 })
