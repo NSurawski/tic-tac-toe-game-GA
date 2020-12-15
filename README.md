@@ -37,4 +37,5 @@ Javascript
 
 ## Unsolved Problems
 
-I did not get to wpork on the actual game functionality for this project because Authentication took me a while to get, so I would like to be able to focus on that for my upcoming re-submittal
+I still need to:
+-
