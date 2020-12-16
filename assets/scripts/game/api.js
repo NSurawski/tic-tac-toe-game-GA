@@ -42,7 +42,7 @@ const signOut = function (data) {
 
 const newGame = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/new-game',
+    url: config.apiUrl + '/game',
     method: 'POST',
     data: data,
     headers: {
