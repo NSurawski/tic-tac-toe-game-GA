@@ -40,7 +40,7 @@ const onSignOutSuccess = function (userData) {
 }
 
 const onSignOutFailure = function (error) {
-  $('m#message').text('Sign Out Failed with error: ' + error.responseJSON.message)
+  $('#message').text('Sign Out Failed with error: ' + error.responseJSON.message)
 }
 
 const onNewGameSuccess = function (userData) {

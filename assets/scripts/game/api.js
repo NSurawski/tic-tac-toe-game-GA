@@ -33,16 +33,15 @@ const signOut = function (data) {
   return $.ajax({
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
-    data: data,
     headers: {
-      Autorization: 'Bearer ' + store.user.token
+      Autorization: 'Bearer '
     }
   })
 }
 
 const newGame = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/game',
+    url: config.apiUrl + '/new-game',
     method: 'POST',
     data: data,
     headers: {

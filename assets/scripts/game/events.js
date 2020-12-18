@@ -59,42 +59,42 @@ const onNewGame = function (event) {
 }
 
 // if user sign in was successful, show create new game button
-    // if( user signs in successfully) {
-        ('#createNewGame').show()
-    // } else {
-        ('#createNewGame').hide()
-      }
+/* if( user signs in successfully) {
+   ('#createNewGame').show()
+} else {
+   ('#createNewGame').hide()
+ } */
 
 // if create new game button is clicked, show gameboard, else hide it
-if(document.getElementbyId('createNewGame').clicked == true) {
+/* if(document.getElementbyId('createNewGame').clicked == true) {
   ('#gameboard').show()
 } else {
   ('#gameboard').hide()
-}
+} */
 
 // display new game button when user signs in
 // const hideShowBtn = function () {
-  // const hideBtn = document.getElementById('#createNewGame').style.visibility = 'hidden'
-  // const showBtn = document.getElementById('#createNewGame').style.visibility = 'visible'
+// const hideBtn = document.getElementById('#createNewGame').style.visibility = 'hidden'
+// const showBtn = document.getElementById('#createNewGame').style.visibility = 'visible'
 //  if (onSignInSuccess === true) {
 //    $.ajax('#createNewGame').show()
 //  } else {
-    // $.ajax('#createNewGame').hide()
-  // }
+// $.ajax('#createNewGame').hide()
+// }
 // }
 
 // when new game button is clicked, start player as x
-  // const playerOne = x
-  // const playerTwo = o
+// const playerOne = x
+// const playerTwo = o
 
-  // const order = function () {
-    // if ('#createNewGame'// is clicked) {
-      // start as x
-      //else {
-        // start as o
-      }
-    }
-  }
+// const order = function () {
+// if ('#createNewGame'// is clicked) {
+// start as x
+// else {
+// start as o
+//  }
+//  }
+//  }
 
 // const gameMove = function (value) {
 //  const form = event.target
@@ -112,6 +112,6 @@ module.exports = {
   onSignIn,
   onChangePass,
   onSignOut,
-  onNewGame,
-  hideShowBtn
+  onNewGame
+  // hideShowBtn
 }
