@@ -8,9 +8,9 @@ const userEvents = require('./game/events')
 $(() => {
   $('#signUp').on('submit', userEvents.onSignUp)
   $('#signIn').on('submit', userEvents.onSignIn)
-  $('#changePassword').on('submit', userEvents.onChangePass)
+  $('#changePass').on('submit', userEvents.onChangePass)
   $('#signOutBtn').on('click', userEvents.onSignOut)
-  $('#createNewGame').on('submit', userEvents.onNewGame)
+  $('#newGame').on('click', userEvents.onNewGame)
   // add Event listener for gameboard clicks:
   // $('#gameboard').addEventListener('click', userEvents)
 })

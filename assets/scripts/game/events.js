@@ -26,23 +26,18 @@ const onSignIn = function (event) {
     .catch(ui.onSignInFailure)
 }
 
-// troubleshoot this
 const onChangePass = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
 
+  // troubleshoot this
   api.changePass(data)
     .then(ui.onChangeSuccess)
     .catch(ui.onChangeFailure)
 }
-// troubleshoot this
 const onSignOut = function (event) {
-  event.preventDefault()
-  const form = event.target
-  const data = getFormFields(form)
-
-  api.signOut(data)
+  api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
 }

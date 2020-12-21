@@ -29,7 +29,9 @@
         <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
         <button id="signUpBtn" type="submit">Sign Up</button>
       </form>
+    </div>
 
+    <div id="authenticated-signIn">
       <h4>Sign In:</h4>
       <form id="signIn">
         <input name="credentials[email]" type="text" placeholder="email">
@@ -43,7 +45,7 @@
       <form id="changePassword">
         <input name="password[old]" type="password" value="current-password" placeholder="old password">
         <input name="password[new]" type="password" value="new-password" placeholder="new password">
-        <button id="changePass" type="button" name="submit">Change Password</button>
+        <button id="changePass" type="submit" name="submit">Change Password</button>
       </form>
       <h4>Sign Out:</h4>
       <button id="signOutBtn" type="button" name="click">Sign Out</button>
@@ -53,7 +55,7 @@
   </div>
   <form id="createNewGame">
     <h4>New Game:</h4>
-    <button id="newGame" type="submit" name="submit">New Game</button>
+    <button id="newGame" type="button" name="click">New Game</button>
   </form>
   <div class="authenticated-2">
     <div id="gameboard">

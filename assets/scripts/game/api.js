@@ -24,7 +24,7 @@ const changePass = function (data) {
     method: 'PATCH',
     data: data,
     headers: {
-      Autorization: 'Bearer ' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
@@ -34,18 +34,18 @@ const signOut = function (data) {
     url: config.apiUrl + '/sign-out',
     method: 'DELETE',
     headers: {
-      Autorization: 'Bearer '
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
 
 const newGame = function (data) {
   return $.ajax({
-    url: config.apiUrl + '/new-game',
+    url: config.apiUrl + '/games',
     method: 'POST',
     data: data,
     headers: {
-      Autorization: 'Bearer ' + store.user.token
+      Authorization: 'Bearer ' + store.user.token
     }
   })
 }
