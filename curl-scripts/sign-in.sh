@@ -11,3 +11,5 @@ curl "${API}${URL_PATH}" \
       "password": "'"${PASSWORD}"'"
     }
   }'
+
+  echo

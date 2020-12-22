@@ -8,3 +8,5 @@ curl "${API}${URL_PATH}" \
   --data '{
     }
   }'
+
+  echo

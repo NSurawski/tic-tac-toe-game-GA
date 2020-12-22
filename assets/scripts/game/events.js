@@ -25,24 +25,24 @@ const onSignIn = function (event) {
     .then(ui.onSignInSuccess)
     .catch(ui.onSignInFailure)
 }
-
+// troubleshoot this
 const onChangePass = function (event) {
   event.preventDefault()
   const form = event.target
   const data = getFormFields(form)
 
-  // troubleshoot this
   api.changePass(data)
     .then(ui.onChangeSuccess)
     .catch(ui.onChangeFailure)
 }
+
+// this is working
 const onSignOut = function (event) {
   api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
 }
-
-// troubleshoot this
+// this is working
 const onNewGame = function (event) {
   event.preventDefault()
   const form = event.target
@@ -51,6 +51,16 @@ const onNewGame = function (event) {
   api.newGame(data)
     .then(ui.onNewGameSuccess)
     .catch(ui.onNewGameFailure)
+}
+
+const onUpdateGame = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.updateGame(data)
+    .then(ui.onUpdateGameSuccess)
+    .catch(ui.onUpdateGameFailure)
 }
 
 // if user sign in was successful, show create new game button
@@ -107,6 +117,7 @@ module.exports = {
   onSignIn,
   onChangePass,
   onSignOut,
-  onNewGame
+  onNewGame,
+  onUpdateGame
   // hideShowBtn
 }

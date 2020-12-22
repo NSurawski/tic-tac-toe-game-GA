@@ -6,10 +6,11 @@ curl "${API}${URL_PATH}/" \
   --request PATCH \
   --header "Authorization: Bearer ${TOKEN}" \
   --header "Content-Type: application/json" \
-  --data ''
---data '{
+  --data '{
   "passwords": {
     "old": "'"${OLDPW}"'",
     "new": "'"${NEWPW}"'"
   }
 }'
+
+echo

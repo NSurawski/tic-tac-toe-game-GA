@@ -8,9 +8,14 @@ const userEvents = require('./game/events')
 $(() => {
   $('#signUp').on('submit', userEvents.onSignUp)
   $('#signIn').on('submit', userEvents.onSignIn)
-  $('#changePass').on('submit', userEvents.onChangePass)
+  $('#changePassword').on('submit', userEvents.onChangePass)
   $('#signOutBtn').on('click', userEvents.onSignOut)
   $('#newGame').on('click', userEvents.onNewGame)
-  // add Event listener for gameboard clicks:
-  // $('#gameboard').addEventListener('click', userEvents)
+  $('#gameboard').on('click', userEvents.onUpdateGame)
 })
+
+// function resetForm () {
+// document.getElementById('signUp').reset()
+// document.getElementById('signIn').reset()
+// document.getElementById('changePassword').reset()
+// }
