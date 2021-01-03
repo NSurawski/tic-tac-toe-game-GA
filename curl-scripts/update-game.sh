@@ -8,10 +8,10 @@ curl "${API}${URL_PATH}" \
   --header "Authorization: Bearer ${TOKEN}" \
   --data "{
     "game": {
-   "cell": {
-     "index": 0,
-     "value": "x"
-   },
-   "over": false
- }
+      "cell": {
+      "index": 0,
+      "value": "x"
+      },
+    "over": false
+    }
   }"

@@ -10,12 +10,11 @@ const onSignUp = function (event) {
   const form = event.target
   const data = getFormFields(form)
 
-  // this is working
   api.signUp(data)
     .then(ui.onCreateSuccess)
     .catch(ui.onCreateFailure)
 }
-// this is working
+
 const onSignIn = function (event) {
   event.preventDefault()
   const form = event.target
@@ -25,7 +24,7 @@ const onSignIn = function (event) {
     .then(ui.onSignInSuccess)
     .catch(ui.onSignInFailure)
 }
-// troubleshoot this
+
 const onChangePass = function (event) {
   event.preventDefault()
   const form = event.target
@@ -36,13 +35,11 @@ const onChangePass = function (event) {
     .catch(ui.onChangeFailure)
 }
 
-// this is working
 const onSignOut = function (event) {
   api.signOut()
     .then(ui.onSignOutSuccess)
     .catch(ui.onSignOutFailure)
 }
-// this is working
 const onNewGame = function (event) {
   event.preventDefault()
   const form = event.target
@@ -63,54 +60,56 @@ const onUpdateGame = function (event) {
     .catch(ui.onUpdateGameFailure)
 }
 
-// if user sign in was successful, show create new game button
-/* if( user signs in successfully) {
-   ('#createNewGame').show()
-} else {
-   ('#createNewGame').hide()
- } */
+const onGetGames = function (event) {
+  event.preventDefault()
+  const form = event.target
+  const data = getFormFields(form)
 
-// if create new game button is clicked, show gameboard, else hide it
-/* if(document.getElementbyId('createNewGame').clicked == true) {
-  ('#gameboard').show()
-} else {
-  ('#gameboard').hide()
-} */
+  api.getGames(data)
+    .then(ui.onGetGamesSuccess)
+    .catch(ui.onGetGamesFailure)
+}
 
-// display new game button when user signs in
-// const hideShowBtn = function () {
-// const hideBtn = document.getElementById('#createNewGame').style.visibility = 'hidden'
-// const showBtn = document.getElementById('#createNewGame').style.visibility = 'visible'
-//  if (onSignInSuccess === true) {
-//    $.ajax('#createNewGame').show()
-//  } else {
-// $.ajax('#createNewGame').hide()
-// }
-// }
+// game functionality
+// variables
+// store all possible winning combos
+// const winning = new Array()
+// store cells each player has selected
+// const player1Move = new Array()
+// const player3Move = new Array()
+// store total game count in variable, start at 0
+// const gameCount = 0
+// board size
+// const boardSize = 3
 
-// when new game button is clicked, start player as x
-// const playerOne = x
-// const playerTwo = o
-
-// const order = function () {
-// if ('#createNewGame'// is clicked) {
-// start as x
-// else {
-// start as o
-//  }
-//  }
-//  }
-
-// const gameMove = function (value) {
-//  const form = event.target
+// function that finds all winning combos that will end game and pushes onto the winning array
+// function gameEnd () {
+// winning.push([0, 1, 2])
+// winning.push([3, 4, 5])
+// winning.push([6, 7, 8])
+// winning.push([0, 4, 8])
+// winning.push([2, 4, 6])
+// winning.push([0, 3, 6])
+// winning.push([2, 5, 8])
+// winning.push([1, 4, 7])
 // }
 
-// To Do:
-// and make a POST games API call to create game
+// get all game cells
+// const cells = document.getElementById('cells')
+// loop through all cells
+// for (let i = 0; i < cells.length; i++) {
+// add a click event to each cells
+// cells[i].addEventListener('click', function () {
+// if (cells[i].innerHTML === '') {
+//  cells[i].innerHTML = playersTurn
 
-// save the API response so you have access to game ID and cells
+// document.querySelectorAll('.cell').forEach(cell => cell.addEventListener('click', gameboardClick))
 
-// utilize event.target for gameboard places?
+// const gamesPlayed = function () {
+//  for (i = 0, i < gameCount.length, i++ ) {
+//    $('#message').text('Game Count: ' + gameCount)
+//  }
+// }
 
 module.exports = {
   onSignUp,
@@ -118,6 +117,6 @@ module.exports = {
   onChangePass,
   onSignOut,
   onNewGame,
-  onUpdateGame
-  // hideShowBtn
+  onUpdateGame,
+  onGetGames
 }

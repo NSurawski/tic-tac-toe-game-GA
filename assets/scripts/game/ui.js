@@ -1,10 +1,5 @@
 const store = require('./../store')
 
-// $('#authenticated').hide()
-// $('#authenticated-2').hide()
-// $('#newGame').hide()
-// $('#gameboard').hide()
-
 const onCreateSuccess = function (userData) {
   $('#message').text('Signed Up Successfully!')
   $('form').trigger('reset')
@@ -27,15 +22,17 @@ const onCreateFailure = function (error) {
 const onSignInSuccess = function (userData) {
   $('#message').text('Signed In Successfully!')
   store.user = userData.user
+  $('form').trigger('reset')
   $('.authenticated').show()
-  $('.authenticated-2').show()
-  $('.unauthenticated').hide()
+  $('#authenticated-2').show()
+  $('#unauthenticated').hide()
   $('#newGame').show()
   $('#gameboard').hide()
 }
 
 const onSignInFailure = function (error) {
   $('#message').text('Sign in failed with error: ' + error.responseJSON.message)
+  $('form').trigger('reset')
   $('#newGame').hide()
   $('#authenticated').hide()
   $('#gameboard').hide()
@@ -43,18 +40,20 @@ const onSignInFailure = function (error) {
 
 const onChangeSuccess = function (userData) {
   $('#message').text('Password Change Successful!')
+  $('form').trigger('reset')
   $('authenticated').show()
 }
 
 const onChangeFailure = function (error) {
   $('#message').text('Password change failed with error: ' + error.responseJSON.message)
+  $('form').trigger('reset')
 }
 
 const onSignOutSuccess = function (userData) {
   $('#message').text('Signed Out Successfully!')
   $('.authenticated').hide()
-  $('.authenticated-2').hide()
-  $('.unauthenticated').show()
+  $('#authenticated-2').hide()
+  $('#unauthenticated').show()
   $('#newGame').hide()
   $('#gameboard').hide()
 }
@@ -86,6 +85,14 @@ const onUpdateGameFailure = function (error) {
   $('#message').text('Update Game failed with error ' + error.responseJSON.message)
 }
 
+const onGetGamesSuccess = function (userData) {
+  $('#message').text('Game Count: ')
+}
+
+const onGetGamesFailure = function (error) {
+  $('#message').text('Game Count failed with error ' + error.responseJSON.message)
+}
+
 module.exports = {
   onCreateSuccess,
   onCreateFailure,
@@ -98,5 +105,7 @@ module.exports = {
   onNewGameSuccess,
   onNewGameFailure,
   onUpdateGameSuccess,
-  onUpdateGameFailure
+  onUpdateGameFailure,
+  onGetGamesSuccess,
+  onGetGamesFailure
 }

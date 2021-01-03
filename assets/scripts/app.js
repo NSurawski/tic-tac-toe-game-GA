@@ -13,9 +13,3 @@ $(() => {
   $('#newGame').on('click', userEvents.onNewGame)
   $('#gameboard').on('click', userEvents.onUpdateGame)
 })
-
-// function resetForm () {
-// document.getElementById('signUp').reset()
-// document.getElementById('signIn').reset()
-// document.getElementById('changePassword').reset()
-// }
